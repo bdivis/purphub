@@ -4,14 +4,14 @@ body {
   background: #232323;
   background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100vw 100vh;
   background-attachment: fixed;
   color: #383f51;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 .nav-background {
-  background: rgba(56, 63, 81, .5);
+  background: rgba(56, 63, 81, .25);
 }
 
 .nav {
@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 80px;
 }
 
 .purphub {
@@ -39,10 +39,30 @@ h3 {
   text-align: center;
 }
 
+#panebox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pane {
+  text-align: center;
+  background-color: rgba(56, 63, 81, .25);
+  width: 20vw;
+  height: 25vw;
+}
+
+#fulltweet {
+  position: relative;
+  color: #f5a549;
+  text-align: center;
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
+
 a {
   text-decoration: none;
   color: #f5a549;
-
   transition: color 0.3s ease;
 }
 

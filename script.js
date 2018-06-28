@@ -10,19 +10,28 @@ var week = [
 
 var today = new Date();
 var day = today.getDay();
+var currentTime = today.getHours();
 var greeting = "";
-if (today.getHours() < 12) {
+if (currentTime < 12) {
   greeting = "Good morning!";
-} else if (today.getHours() < 16) {
+} else if (currentTime < 16) {
   greeting = "Good afternoon!";
 } else {
   greeting = "Good evening!";
 }
 
-var x = greeting + " " + week[day];
-document.getElementById("greeting").innerText = x;
+document.getElementById("greeting").innerText = greeting + " " + week[day];
 
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', (event) => {
   hamburger.classList.toggle('active');
 });
+
+fetch('http://192.168.0.14:3001/tweets/random')
+  .then(response => response.json())
+  .then(function(data) {
+    let tweet = data.tweet;
+    let time = moment(data.date).format('MMMM Do YYYY, h:mm a');
+    document.getElementById("tweet").innerHTML = tweet;
+    document.getElementById("tweettime").innerHTML = time;
+  })
