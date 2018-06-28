@@ -25,13 +25,19 @@ document.getElementById("greeting").innerText = greeting + " " + week[day];
 const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', (event) => {
   hamburger.classList.toggle('active');
+
 });
+
+document.getElementById('tweet').innerHTML = 'Loading tweet...';
 
 fetch('http://192.168.0.14:3001/tweets/random')
   .then(response => response.json())
-  .then(function(data) {
+  .then(function (data) {
     let tweet = data.tweet;
     let time = moment(data.date).format('MMMM Do YYYY, h:mm a');
     document.getElementById("tweet").innerHTML = tweet;
     document.getElementById("tweettime").innerHTML = time;
   })
+  .catch(function(error) {
+    document.getElementById("tweet").innerHTML = "Can't load tweet right now. I'm deeply sorry.";
+  });
