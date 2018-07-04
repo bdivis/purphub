@@ -29,7 +29,7 @@ hamburger.addEventListener("click", event => {
 
 document.getElementById("tweet").innerHTML = "Loading tweet...";
 
-fetch("https://purphub-api.heroku.app.com/tweets/random")
+fetch("https://purphub-api.herokuapp.com/tweets/random")
   .then(response => response.json())
   .then(function(data) {
     let tweet = data.tweet;
