@@ -58,6 +58,7 @@ h3 {
 #nothing {
   color: cornflowerblue;
   padding: 10%;
+  font-size: 40px;
 }
 
 #panebox {
@@ -66,6 +67,27 @@ h3 {
   justify-content: space-evenly;
 }
 
+#about {
+  display: flex;
+  margin-top: 5%;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about img {
+  width: 40%;
+  height: 40%;
+}
+
+h2 {
+  /* border: 1px black solid; */
+  background: rgba(40, 49, 70, 0.6);
+  color: cornflowerblue;
+  font-weight: 100;
+  width: 40vw;
+}
 .pane {
   transition: all .3s ease;
   display: flex;
