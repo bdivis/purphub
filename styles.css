@@ -3,211 +3,431 @@
   margin: 0;
 }
 
-body {
-  background: #232323;
-  background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
-  color: #383f51;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+@media (max-width: 1800px) {
+  body {
+    background: #232323;
+    background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: #383f51;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+  }
+
+  .nav-background {
+    background: rgba(56, 63, 81, 0.25);
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+  }
+
+  .purphub {
+    font-weight: 100;
+    color: #f7dd72;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  #social {
+    display: flex;
+    order: 3;
+    padding: 40px;
+  }
+
+  #menusocial {
+    display: none;
+  }
+
+  .fa {
+    display: relative;
+    padding: 10px;
+    font-size: 20px;
+  }
+  h3 {
+    display: grid;
+    font-family: "Avenir Next";
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #nothing {
+    color: cornflowerblue;
+    padding: 10%;
+    font-size: 40px;
+  }
+
+  #panebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #about {
+    display: flex;
+    margin-top: 5%;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #about img {
+    width: 40%;
+    height: 40%;
+  }
+
+  h2 {
+    background: rgba(40, 49, 70, 0.6);
+    color: cornflowerblue;
+    font-weight: 100;
+    width: 40vw;
+  }
+  .pane {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(56, 63, 81, 0.25);
+    width: 200px;
+    height: 32vw;
+    color: #f7dd72;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  .pane:hover {
+    color: tomato;
+    transform: scale(1.05);
+    background-color: rgba(56, 63, 81, 0.4);
+  }
+
+  #fulltweet {
+    position: relative;
+    color: #f5a549;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #f5a549;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: tomato;
+  }
+
+  #menu {
+    position: absolute;
+    width: 125px;
+    top: 80px;
+    padding: 25px;
+
+    background: rgba(56, 63, 81, 0.85);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.15s ease-in;
+  }
+
+  #menu.visible {
+    transform: translate(0, 0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    padding: 40px;
+  }
+  .hamburger .container {
+    position: relative;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  .hamburger:hover .line1 {
+    top: -3px;
+  }
+  .hamburger:hover .line3 {
+    top: 21px;
+  }
+  .hamburger.active:hover .line1 {
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+  }
+  .hamburger.active:hover .line3 {
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg);
+  }
+  .hamburger.active .line1 {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  .hamburger.active .line2 {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  .hamburger.active .line3 {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .hamburger .line {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s all;
+    opacity: 1;
+  }
+  .hamburger .line1 {
+    top: 0;
+  }
+  .hamburger .line2 {
+    top: 9px;
+  }
+  .hamburger .line3 {
+    top: 18px;
+  }
 }
 
-.nav-background {
-  background: rgba(56, 63, 81, .25);
-}
+@media (max-width: 700px) {
+  body {
+    background: #232323;
+    background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    color: #383f51;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+  }
 
-.nav {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 80px;
-  justify-content: space-between;
-}
+  .nav-background {
+    background: rgba(56, 63, 81, 0.25);
+  }
 
-.purphub {
-  font-weight: 100;
-  color: #f7dd72;
-  font-size: 50px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-}
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+  }
 
-#social {
-  display: flex;
-  order: 3;
-  padding: 40px;
-}
+  .purphub {
+    font-weight: 100;
+    color: #f7dd72;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
 
-.fa {
-  display: relative;
-  padding: 10px;
-  font-size: 20px;
-}
-h3 {
-  display: grid;
-  font-family: "Avenir Next";
-  font-style: italic;
-  text-align: center;
-  padding: 20px;
-}
+  #social {
+    display: none;
+    order: 3;
+    padding: 40px;
+  }
 
-#nothing {
-  color: cornflowerblue;
-  padding: 10%;
-  font-size: 40px;
-}
+  #menusocial {
+    display: inherit;
+  }
 
-#panebox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+  .fa {
+    display: relative;
+    padding: 10px;
+    font-size: 20px;
+  }
 
-#about {
-  display: flex;
-  margin-top: 5%;
-  flex-flow: row wrap;
-  text-align: center;
-  justify-content: space-around;
-  align-items: center;
-}
+  h3 {
+    display: grid;
+    font-family: "Avenir Next";
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+  }
 
-#about img {
-  width: 40%;
-  height: 40%;
-}
+  #nothing {
+    color: cornflowerblue;
+    padding: 10%;
+    font-size: 40px;
+  }
 
-h2 {
-  /* border: 1px black solid; */
-  background: rgba(40, 49, 70, 0.6);
-  color: cornflowerblue;
-  font-weight: 100;
-  width: 40vw;
-}
-.pane {
-  transition: all .3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(56, 63, 81, .25);
-  width: 20vw;
-  height: 30vw;
-  color: #f7dd72;
-  font-size: 40px;
-  font-weight: 100;
-}
+  #about {
+    display: flex;
+    margin-top: 5%;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.pane:hover {
-  color: tomato;
-  transform: scale(1.05);
-}
+  #about img {
+    width: 40%;
+    height: 40%;
+  }
 
-#fulltweet {
+  h2 {
+    background: rgba(40, 49, 70, 0.6);
+    color: cornflowerblue;
+    font-weight: 100;
+    width: 40vw;
+  }
 
-  position: relative;
-  color: #f5a549;
-  text-align: center;
-  padding: 10px;
-  margin: 30px;
-}
+  #panebox {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
 
-a {
-  text-decoration: none;
-  color: #f5a549;
-  transition: color 0.3s ease;
-}
+  .pane {
+    transition: all 0.3s ease;
+    display: flex;
+    background-color: rgba(56, 63, 81, 0.25);
+    width: 50vw;
+    height: 50vw;
+    color: #f7dd72;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 5px;
+  }
 
-a:hover {
-  color: tomato;
-}
+  .pane:hover {
+    color: tomato;
+    transform: scale(1.05);
+    background-color: rgba(56, 63, 81, 0.4);
+  }
 
-#menu {
-  position: absolute;
-  width: 125px;
-  top: 80px;
-  padding: 25px;
+  #fulltweet {
+    position: relative;
+    color: #f5a549;
+    text-align: center;
+    padding: 10px;
+    margin: 30px;
+  }
 
-  background: rgba(56, 63, 81, .85);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.15s ease-in;
-}
+  a {
+    text-decoration: none;
+    color: #f5a549;
+    transition: color 0.3s ease;
+  }
 
-#menu.visible {
-  transform: translate(0, 0);
-}
+  a:hover {
+    color: tomato;
+  }
 
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
+  #menu {
+    position: absolute;
+    width: 125px;
+    top: 80px;
+    padding: 25px;
 
-.hamburger {
-  position: relative;
-  width: 40px;
-  height: 20px;
-  padding: 40px;
-}
-.hamburger .container {
-  position: relative;
-}
-.hamburger:hover {
-  cursor: pointer;
-}
-.hamburger:hover .line1 {
-  top: -3px;
-}
-.hamburger:hover .line3 {
-  top: 21px;
-}
-.hamburger.active:hover .line1 {
-  -webkit-transform: rotate(140deg);
-          transform: rotate(140deg);
-}
-.hamburger.active:hover .line3 {
-  -webkit-transform: rotate(-140deg);
-          transform: rotate(-140deg);
-}
-.hamburger.active .line1 {
-  top: 9px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-.hamburger.active .line2 {
-  -webkit-transform: translateX(-500px);
-          transform: translateX(-500px);
-  opacity: 0;
-}
-.hamburger.active .line3 {
-  top: 9px;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-}
-.hamburger .line {
-  position: absolute;
-  width: 40px;
-  height: 2px;
-  background: white;
-  border-radius: 2px;
-  transition: 0.3s all;
-  opacity: 1;
-}
-.hamburger .line1 {
-  top: 0;
-}
-.hamburger .line2 {
-  top: 9px;
-}
-.hamburger .line3 {
-  top: 18px;
+    background: rgba(56, 63, 81, 0.85);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.15s ease-in;
+  }
+
+  #menu.visible {
+    transform: translate(0, 0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    padding: 40px;
+  }
+  .hamburger .container {
+    position: relative;
+  }
+  .hamburger:hover {
+    cursor: pointer;
+  }
+  .hamburger:hover .line1 {
+    top: -3px;
+  }
+  .hamburger:hover .line3 {
+    top: 21px;
+  }
+  .hamburger.active:hover .line1 {
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+  }
+  .hamburger.active:hover .line3 {
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg);
+  }
+  .hamburger.active .line1 {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  .hamburger.active .line2 {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  .hamburger.active .line3 {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .hamburger .line {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s all;
+    opacity: 1;
+  }
+  .hamburger .line1 {
+    top: 0;
+  }
+  .hamburger .line2 {
+    top: 9px;
+  }
+  .hamburger .line3 {
+    top: 18px;
+  }
 }
