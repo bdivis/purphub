@@ -43,3 +43,8 @@ fetch("https://purphub-api.herokuapp.com/tweets/random")
     document.getElementById("tweet").innerHTML =
       "Can't load tweet right now. I'm deeply sorry.";
   });
+
+$(function() {
+  var wall = new Freewall("#container");
+  wall.fitWidth();
+});

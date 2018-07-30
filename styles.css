@@ -8,7 +8,8 @@
     background: #232323;
     background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
     color: #383f51;
     font-family: "Avenir Next", "Avenir", sans-serif;
@@ -82,16 +83,17 @@
   }
 
   #about img {
-    width: 40%;
-    height: 40%;
+    width: 45%;
+    height: 45%;
   }
 
-  h2 {
+  #aboutText {
     background: rgba(40, 49, 70, 0.6);
     color: cornflowerblue;
     font-weight: 100;
+    font-size: 1.25em;
     width: 40vw;
-  }
+    }
   .pane {
     transition: all 0.3s ease;
     display: flex;
@@ -221,7 +223,8 @@
     background: #232323;
     background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-253019.png");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
     color: #383f51;
     font-family: "Avenir Next", "Avenir", sans-serif;
@@ -283,14 +286,15 @@
   #about {
     display: flex;
     margin-top: 5%;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     text-align: center;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
   }
 
   #about img {
-    width: 40%;
+    width: 80vw;
     height: 40%;
   }
 
@@ -298,7 +302,8 @@
     background: rgba(40, 49, 70, 0.6);
     color: cornflowerblue;
     font-weight: 100;
-    width: 40vw;
+    width: 80vw;
+    margin-top: 20px;
   }
 
   #panebox {
