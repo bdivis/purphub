@@ -22,11 +22,10 @@ if (currentTime < 12) {
 
 document.getElementById("greeting").innerText = greeting + " " + week[day];
 
-const hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click', (event) => {
-  hamburger.classList.toggle('active');
-  menu.classList.toggle('visible');
-
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", event => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("visible");
 });
 
 document.getElementById("tweet").innerHTML = "Loading tweet...";
@@ -43,8 +42,3 @@ fetch("https://purphub-api.herokuapp.com/tweets/random")
     document.getElementById("tweet").innerHTML =
       "Can't load tweet right now. I'm deeply sorry.";
   });
-
-$(function() {
-  var wall = new Freewall("#container");
-  wall.fitWidth();
-});
